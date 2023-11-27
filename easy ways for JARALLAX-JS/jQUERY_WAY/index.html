@@ -1,0 +1,95 @@
+<!--
+jarallax github link
+https://github.com/nk-o/jarallax/tree/master 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Example</title>
+    <!-- Styles CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Jarallax CSS importatnt to implement -->
+    <link href="css/jarallax.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="section">
+        <h1>jQuery Example <br> Scroll down ></h1>
+    </div>
+
+
+    <!--    jarallax img self hosted/online:url 
+     -->
+    <!-- <div class="jarallax">
+        <img class="jarallax-img" src="img2.webp" alt="" />
+    </div> -->
+
+
+    <!--     jarallax video only from youtube/vimeo 
+     -->
+    <!-- <div class="jarallax" data-video-src="https://youtu.be/mru3Q5m4lkY">    
+    </div> -->
+
+
+    <!--    jarallax video self hosted / url / path
+     -->
+    <div class="jarallax" data-speed="0.7" data-video-src="mp4:course-video.mp4">
+        <img class="jarallax-img" src="course-video.mp4" alt="" loading="lazy" />
+    </div>
+
+
+    <div class="section">
+        <h1>jQuery Example <br> Scroll up ></h1>
+    </div>
+
+
+
+    <!-- jQuery CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+
+    <!-- Jarallax JS CDN -->
+    <script src="jarallax.min.js"></script>
+    <script src="jarallax-video.min.js"></script>
+
+
+    <!-- Init Jarallax SCRIPT -->
+    <script type="text/javascript">
+        // jarallax install 
+
+        // $(".jarallax").jarallax();
+
+
+        // jarallax install with speed of bg video
+
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.4,
+        })
+
+
+        // diasable jaralax img & video on devices 
+
+        // jarallax(document.querySelectorAll('.jarallax'), {
+        //     disableParallax: /iPad|iPhone|iPod|Android/,
+        //     disableVideo: /iPad|iPhone|iPod|Android/
+        // })
+
+
+        // or function way to diasable jaralax img & video on devices 
+
+        // jarallax(document.querySelectorAll('.jarallax'), {
+        //     disableParallax: function() {
+        //         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+        //     },
+        //     disableVideo: function() {
+        //         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+        //     }
+        // });
+    </script>
+</body>
+
+</html>

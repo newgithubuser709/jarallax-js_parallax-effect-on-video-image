@@ -1,0 +1,90 @@
+<!--
+jarallax github link
+https://github.com/nk-o/jarallax/tree/master 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript Example</title>
+    <!-- Styles CSS-->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Jarallax CSS important to implement -->
+    <link href="css/jarallax.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="section">
+        <h1>JavaScript Example <br> Scroll down ></h1>
+    </div>
+
+
+    <!--    jarallax img self hosted/online:url 
+     -->
+    <div class="jarallax">
+        <img class="jarallax-img" src="img1.webp" alt="" /> Your content here...
+    </div>
+
+
+    <!--     jarallax video only from youtube/vimeo 
+     -->
+    <!-- <div class="jarallax" data-video-src="https://youtu.be/6jVHREdafT8?si=bcfc_UCOygehRbUw">
+       Your content here...
+    </div> -->
+
+
+    <!--    jarallax video self hosted / url / path
+     -->
+    <!-- <div class="jarallax" data-speed="0.7" data-video-src="mp4:course-video.mp4">
+        <img class="jarallax-img" src="course-video.mp4" alt="" loading="lazy" />
+    </div> -->
+
+
+    <div class="section">
+        <h1>JavaScript Example <br> Scroll up ></h1>
+    </div>
+
+
+    <!-- Jarallax JS CDN -->
+    <script src="jarallax.min.js"></script>
+    <script src="jarallax-video.min.js"></script>
+
+    <!-- Init Jarallax SCRIPT -->
+    <script type="text/javascript">
+        // jarallax(document.querySelectorAll(".jarallax"));
+
+
+        // if speed need
+
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.4,
+        })
+
+
+        // diasable jaralax img & video on devices 
+
+        // jarallax(document.querySelectorAll('.jarallax'), {
+        //     disableParallax: /iPad|iPhone|iPod|Android/,
+        //     disableVideo: /iPad|iPhone|iPod|Android/
+        // })
+
+
+        // or function way to diasable jaralax img & video on devices 
+
+        // jarallax(document.querySelectorAll('.jarallax'), {
+        //     disableParallax: function() {
+        //         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+        //     },
+        //     disableVideo: function() {
+        //         return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
